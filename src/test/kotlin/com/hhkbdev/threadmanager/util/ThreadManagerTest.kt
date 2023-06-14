@@ -7,15 +7,15 @@ import java.util.concurrent.TimeUnit
 class ThreadManagerTest {
     @Test
     fun testStartTaskAndStopTask() {
-        val threadManager = ThreadManager()
+        val threadTaskManager = ThreadTaskManager()
 
-        val taskId = threadManager.startTask()
+        val taskId = threadTaskManager.startTask()
 
-        assertThat(threadManager.isTaskRunning(taskId)).isTrue()
+        assertThat(threadTaskManager.isTaskRunning(taskId)).isTrue()
         TimeUnit.SECONDS.sleep(2)
 
-        threadManager.stopTask(taskId)
+        threadTaskManager.stopTask(taskId)
 
-        assertThat(threadManager.isTaskRunning(taskId)).isFalse()
+        assertThat(threadTaskManager.isTaskRunning(taskId)).isFalse()
     }
 }

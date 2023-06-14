@@ -5,7 +5,7 @@ import java.util.concurrent.CompletableFuture
 import java.util.concurrent.TimeUnit
 
 
-class ThreadManager {
+class ThreadTaskManager {
     private val runningTasks: MutableMap<String, CompletableFuture<Void>> = mutableMapOf()
 
     fun startTask(): String {
